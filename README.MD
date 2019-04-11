@@ -32,7 +32,7 @@ applications:
 > task_source.toy_task=maven://com.devoxxfr.scdf:demo-task-source-toy:0.0.1-SNAPSHOT
 > source.toy_source=maven://com.devoxxfr.scdf:demo-task-source-toy:0.0.1-SNAPSHOT
 > processor.child_processor=maven://com.devoxxfr.scdf:demo-processor-child:0.0.1-SNAPSHOT
-> sink.letter_sink=maven://com.devoxxfr.scdf:demo-sink-lettre:0.0.1-SNAPSHOT
+> sink.letter_sink=maven://com.devoxxfr.scdf:demo-sink-letter:0.0.1-SNAPSHOT
 
 - **Create Task and Streams**
  
