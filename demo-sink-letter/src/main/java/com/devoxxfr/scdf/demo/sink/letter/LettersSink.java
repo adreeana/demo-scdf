@@ -8,21 +8,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.stereotype.Component;
 
 @EnableBinding(Sink.class)
 public class LettersSink {
-  private static final Logger log = LoggerFactory.getLogger(LettersSink.class);
 
   @Autowired
   private Letter letter;
 
   @StreamListener(Sink.INPUT)
-  public void wish(WishEvent event) {
-
+  public void writeLetter(WishEvent event) {
     if (event.wishMade()) {
       letter.addWish(event.getWish());
-
-      log.info("{}", letter);
     }
   }
 }
