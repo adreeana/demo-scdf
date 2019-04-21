@@ -20,13 +20,13 @@ You must manually configure Prometheus and tell it the URLs where it can get the
 
 In prometheus.yml add the following scrape config:
 
->scrape_configs:
->  - job_name: 'scdf'
->    metrics_path: '/actuator/prometheus'
->    file_sd_configs:
->      - files:
->          - /tmp/targets.json
->        refresh_interval: 5s
+> scrape_configs:
+>   \- job_name: 'scdf'
+>     metrics_path: '/actuator/prometheus'
+>     file_sd_configs:
+>       \- files:
+>           \- /tmp/targets.json
+>         refresh_interval: 5s
 
 To check if your targets are up, use the following URL:
 > http://localhost:9090/targets
@@ -84,3 +84,7 @@ Streams: localhost:3000/d/scdf-streams/streams?refresh=10s
 - **Learn more**
 
 [Spring online reference documentation](https://docs.spring.io/spring-cloud-dataflow/docs/current/reference/htmlsingle/#getting-started)
+
+- **Slides**
+
+[Slide Share](https://www.slideshare.net/AdrianaNitescu/pimp-up-your-spring-batch-en-streaming-avec-spring-cloud-data-flow-et-kafka-141454729)
